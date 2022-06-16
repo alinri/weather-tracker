@@ -20,9 +20,9 @@ class Weather(Base):
 
     id = Column(Integer, primary_key=True)
     city_name = Column(String(255), nullable=False)
-    temp_c = Column(DECIMAL)
+    temp_c = Column(DECIMAL(precision=5, scale=2))
     local_time = Column(DateTime)
-    wind_kph = Column(DECIMAL)
+    wind_kph = Column(DECIMAL(precision=5, scale=2))
 
 
 Base.metadata.create_all(engine)
